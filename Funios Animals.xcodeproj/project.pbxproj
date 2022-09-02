@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF46F92228B09D310093E81F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F92128B09D310093E81F /* AppDelegate.swift */; };
+		BF46F92428B09D310093E81F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F92328B09D310093E81F /* SceneDelegate.swift */; };
+		BF46F92628B09D310093E81F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F92528B09D310093E81F /* LoginViewController.swift */; };
+		BF46F92928B09D310093E81F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF46F92728B09D310093E81F /* Main.storyboard */; };
+		BF46F92B28B09D320093E81F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF46F92A28B09D320093E81F /* Assets.xcassets */; };
+		BF46F92E28B09D320093E81F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF46F92C28B09D320093E81F /* LaunchScreen.storyboard */; };
+		BF46F93628B0A5510093E81F /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF46F93528B0A5510093E81F /* MovieCell.xib */; };
+		BF46F93828B0CE7D0093E81F /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F93728B0CE7D0093E81F /* MovieCell.swift */; };
+		BF46F93D28B0D2300093E81F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F93C28B0D2300093E81F /* Movie.swift */; };
+		BF46F94128B0D4840093E81F /* ListMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F94028B0D4840093E81F /* ListMovieViewController.swift */; };
+		BF46F94528B0DB9A0093E81F /* DetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F94328B0DB9A0093E81F /* DetailMovieViewController.swift */; };
+		BF46F94628B0DB9A0093E81F /* DetailMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF46F94428B0DB9A0093E81F /* DetailMovieViewController.xib */; };
+		BF46F94928B0FFD80093E81F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F94828B0FFD80093E81F /* ProfileViewController.swift */; };
+		BFB9654D28C23D5A00CD2B34 /* RemoteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB9654C28C23D5A00CD2B34 /* RemoteMovie.swift */; };
+		BFB9655028C247DB00CD2B34 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BFB9654F28C247DB00CD2B34 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BF46F91E28B09D310093E81F /* Funios Animals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funios Animals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF46F92128B09D310093E81F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF46F92328B09D310093E81F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BF46F92528B09D310093E81F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF46F92828B09D310093E81F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF46F92A28B09D320093E81F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF46F92D28B09D320093E81F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF46F92F28B09D320093E81F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF46F93528B0A5510093E81F /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		BF46F93728B0CE7D0093E81F /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		BF46F93C28B0D2300093E81F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		BF46F94028B0D4840093E81F /* ListMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieViewController.swift; sourceTree = "<group>"; };
+		BF46F94328B0DB9A0093E81F /* DetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = "<group>"; };
+		BF46F94428B0DB9A0093E81F /* DetailMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMovieViewController.xib; sourceTree = "<group>"; };
+		BF46F94828B0FFD80093E81F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BFB9654C28C23D5A00CD2B34 /* RemoteMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMovie.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF46F91B28B09D310093E81F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFB9655028C247DB00CD2B34 /* Kingfisher in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF46F91528B09D310093E81F = {
+			isa = PBXGroup;
+			children = (
+				BF46F92028B09D310093E81F /* Funios Animals */,
+				BF46F91F28B09D310093E81F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF46F91F28B09D310093E81F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF46F91E28B09D310093E81F /* Funios Animals.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF46F92028B09D310093E81F /* Funios Animals */ = {
+			isa = PBXGroup;
+			children = (
+				BF46F94728B0FFCB0093E81F /* Profile */,
+				BF46F94228B0DB6A0093E81F /* Detail Movie */,
+				BF46F93F28B0D4780093E81F /* List Movie */,
+				BF46F93E28B0D3830093E81F /* Login */,
+				BF46F93B28B0D1F80093E81F /* Data Model */,
+				BF46F93A28B0CE8E0093E81F /* Cell */,
+				BF46F92128B09D310093E81F /* AppDelegate.swift */,
+				BF46F92328B09D310093E81F /* SceneDelegate.swift */,
+				BF46F92728B09D310093E81F /* Main.storyboard */,
+				BF46F92A28B09D320093E81F /* Assets.xcassets */,
+				BF46F92C28B09D320093E81F /* LaunchScreen.storyboard */,
+				BF46F92F28B09D320093E81F /* Info.plist */,
+			);
+			path = "Funios Animals";
+			sourceTree = "<group>";
+		};
+		BF46F93A28B0CE8E0093E81F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BF46F93528B0A5510093E81F /* MovieCell.xib */,
+				BF46F93728B0CE7D0093E81F /* MovieCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BF46F93B28B0D1F80093E81F /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF46F93C28B0D2300093E81F /* Movie.swift */,
+				BFB9654C28C23D5A00CD2B34 /* RemoteMovie.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		BF46F93E28B0D3830093E81F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BF46F92528B09D310093E81F /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BF46F93F28B0D4780093E81F /* List Movie */ = {
+			isa = PBXGroup;
+			children = (
+				BF46F94028B0D4840093E81F /* ListMovieViewController.swift */,
+			);
+			path = "List Movie";
+			sourceTree = "<group>";
+		};
+		BF46F94228B0DB6A0093E81F /* Detail Movie */ = {
+			isa = PBXGroup;
+			children = (
+				BF46F94328B0DB9A0093E81F /* DetailMovieViewController.swift */,
+				BF46F94428B0DB9A0093E81F /* DetailMovieViewController.xib */,
+			);
+			path = "Detail Movie";
+			sourceTree = "<group>";
+		};
+		BF46F94728B0FFCB0093E81F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BF46F94828B0FFD80093E81F /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF46F91D28B09D310093E81F /* Funios Animals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF46F93228B09D320093E81F /* Build configuration list for PBXNativeTarget "Funios Animals" */;
+			buildPhases = (
+				BF46F91A28B09D310093E81F /* Sources */,
+				BF46F91B28B09D310093E81F /* Frameworks */,
+				BF46F91C28B09D310093E81F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Funios Animals";
+			packageProductDependencies = (
+				BFB9654F28C247DB00CD2B34 /* Kingfisher */,
+			);
+			productName = "Funios Animals";
+			productReference = BF46F91E28B09D310093E81F /* Funios Animals.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF46F91628B09D310093E81F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					BF46F91D28B09D310093E81F = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = BF46F91928B09D310093E81F /* Build configuration list for PBXProject "Funios Animals" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF46F91528B09D310093E81F;
+			packageReferences = (
+				BFB9654E28C247DB00CD2B34 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = BF46F91F28B09D310093E81F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF46F91D28B09D310093E81F /* Funios Animals */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF46F91C28B09D310093E81F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF46F92E28B09D320093E81F /* LaunchScreen.storyboard in Resources */,
+				BF46F94628B0DB9A0093E81F /* DetailMovieViewController.xib in Resources */,
+				BF46F93628B0A5510093E81F /* MovieCell.xib in Resources */,
+				BF46F92B28B09D320093E81F /* Assets.xcassets in Resources */,
+				BF46F92928B09D310093E81F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF46F91A28B09D310093E81F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF46F92628B09D310093E81F /* LoginViewController.swift in Sources */,
+				BF46F93828B0CE7D0093E81F /* MovieCell.swift in Sources */,
+				BF46F94528B0DB9A0093E81F /* DetailMovieViewController.swift in Sources */,
+				BF46F94128B0D4840093E81F /* ListMovieViewController.swift in Sources */,
+				BF46F92228B09D310093E81F /* AppDelegate.swift in Sources */,
+				BF46F92428B09D310093E81F /* SceneDelegate.swift in Sources */,
+				BFB9654D28C23D5A00CD2B34 /* RemoteMovie.swift in Sources */,
+				BF46F94928B0FFD80093E81F /* ProfileViewController.swift in Sources */,
+				BF46F93D28B0D2300093E81F /* Movie.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF46F92728B09D310093E81F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF46F92828B09D310093E81F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF46F92C28B09D320093E81F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF46F92D28B09D320093E81F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF46F93028B09D320093E81F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF46F93128B09D320093E81F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF46F93328B09D320093E81F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7PX2RYRJL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Funios Animals/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.funios.Funios-Animals";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF46F93428B09D320093E81F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7PX2RYRJL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Funios Animals/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.funios.Funios-Animals";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF46F91928B09D310093E81F /* Build configuration list for PBXProject "Funios Animals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF46F93028B09D320093E81F /* Debug */,
+				BF46F93128B09D320093E81F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF46F93228B09D320093E81F /* Build configuration list for PBXNativeTarget "Funios Animals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF46F93328B09D320093E81F /* Debug */,
+				BF46F93428B09D320093E81F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BFB9654E28C247DB00CD2B34 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BFB9654F28C247DB00CD2B34 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFB9654E28C247DB00CD2B34 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BF46F91628B09D310093E81F /* Project object */;
+}
