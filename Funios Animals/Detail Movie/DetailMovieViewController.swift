@@ -54,4 +54,7 @@ class DetailMovieViewController: UIViewController {
 //        descriptionLabel.text = movie.description
     }
 
+    private func convertSecondToHourMinutes(runningTime: String) -> String {
+        guard let runningTime = Int(runningTime) else { return "\(runningTime) m" }
+        return "\(runningTime / 60)h \(runningTime % 60)m"
 }
