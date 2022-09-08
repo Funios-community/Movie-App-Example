@@ -14,6 +14,8 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var labelOriginalTitle: UILabel!
     @IBOutlet weak var labelSinopsis: UILabel!
 
+    @IBOutlet weak var imageContainer: UIView!
+    
     private var downloadTask: URLSessionDataTask?
     private var movie: RemoteMovie!
 
@@ -46,21 +48,25 @@ class MovieCell: UITableViewCell {
     }
     
     func downloadImage() {
-        downloadTask = URLSession.shared.dataTask(with: self.movie.movieBanner) { data, response, error in
-            guard let data = data else { return }
-            
-            if let image = UIImage(data: data) {
-                DispatchQueue.main.sync {
-                    self.imageMovieBanner.image = image
+        imageContainer.isShimmering = true
+        self.downloadTask = URLSession.shared.dataTask(with: movie.movieBanner) { data, response, error in
+            DispatchQueue.main.sync {
+                self.imageContainer.isShimmering = false
+                if let data = data {
+                    if let image = UIImage(data: data) {
+                        self.imageMovieBanner.image = image
+                    }
                 }
-            } else {
-                print("Error fetching image \(error)")
             }
         }
-        downloadTask?.resume()
+        self.downloadTask?.resume()
     }
     
-    func cancelDownloadRemoveImage() {
+    // Loading -> Tampilin Loading
+    // Success -> Tampilin Data
+    // Failed -> Tampilin Error
+    
+    func cancelDownloadAndRemoveImage() {
         downloadTask?.suspend()
         downloadTask = nil
         imageMovieBanner.image = nil

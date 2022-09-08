@@ -107,7 +107,7 @@ class ListMovieViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let cell = cell as! MovieCell
-        cell.cancelDownloadRemoveImage()
+        cell.cancelDownloadAndRemoveImage()
     }
     
     func routeToDetailMovie(for movieID: String) {

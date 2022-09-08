@@ -19,18 +19,28 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uKf-wI-3Hh">
                         <rect key="frame" x="20" y="6" width="367" height="357"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VBP-5h-b1U">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2QC-Sb-eS9">
                                 <rect key="frame" x="0.0" y="0.0" width="367" height="229.5"/>
-                                <color key="backgroundColor" red="0.65490192169999994" green="0.65882360939999995" blue="0.66274499890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VBP-5h-b1U">
+                                        <rect key="frame" x="0.0" y="0.0" width="367" height="229.5"/>
+                                        <color key="backgroundColor" red="0.65490192169999994" green="0.65882360939999995" blue="0.66274499890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="VBP-5h-b1U" secondAttribute="height" multiplier="16:10" id="mwX-VJ-5NI"/>
+                                    <constraint firstAttribute="trailing" secondItem="VBP-5h-b1U" secondAttribute="trailing" id="W8A-Qw-ut1"/>
+                                    <constraint firstItem="VBP-5h-b1U" firstAttribute="leading" secondItem="2QC-Sb-eS9" secondAttribute="leading" id="pH5-KX-2fD"/>
+                                    <constraint firstAttribute="width" secondItem="2QC-Sb-eS9" secondAttribute="height" multiplier="16:10" id="sWX-LK-EoO"/>
+                                    <constraint firstAttribute="bottom" secondItem="VBP-5h-b1U" secondAttribute="bottom" id="syY-n9-g2U"/>
+                                    <constraint firstItem="VBP-5h-b1U" firstAttribute="top" secondItem="2QC-Sb-eS9" secondAttribute="top" id="vYt-AF-kQ9"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="My Neighbor Totoro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jW-oE-9bd">
                                 <rect key="frame" x="0.0" y="237.5" width="367" height="17"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
@@ -60,6 +70,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="imageContainer" destination="2QC-Sb-eS9" id="POE-sY-caG"/>
                 <outlet property="imageMovieBanner" destination="VBP-5h-b1U" id="AfO-O9-Q39"/>
                 <outlet property="labelMovieTitle" destination="2jW-oE-9bd" id="01H-1x-Miq"/>
                 <outlet property="labelOriginalTitle" destination="GD9-cJ-uuk" id="gZO-4B-iZW"/>
@@ -74,6 +85,9 @@
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
