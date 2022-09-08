@@ -9,7 +9,7 @@ import UIKit
 
 class DetailMovieViewController: UIViewController {
 
-    var id: String?
+    var movieID: String!
     
     @IBOutlet weak var bannerImageView: UIImageView!
     @IBOutlet weak var posterImageView: UIImageView!
@@ -29,32 +29,52 @@ class DetailMovieViewController: UIViewController {
     }
     
     func getMovieDetail() {
-        let url = URL(string: "https://ghibliapi.herokuapp.com/films/\(id)")!
+        guard let movieID = self.movieID else { return }
+        let url = URL(string: "https://ghibliapi.herokuapp.com/films/\(movieID)")!
      
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             do {
                 let decoder = JSONDecoder()
-                let movie = try decoder.decode(RemoteMovie.self, from: data!)
+                let movieDetail = try decoder.decode(RemoteMovieDetail.self, from: data!)
                 
-                //binding data detail
-                self.bindData(movie: movie)
+                DispatchQueue.main.async { [weak self] in
+                    self?.bindData(with: movieDetail)
+                }
             } catch {
                 print("Error \(error)")
             }
         }.resume()
     }
 
-    func bindData(movie: RemoteMovie) {
-//        bannerImageView.image = movie.movieBanner
-//        posterImageView.image = movie.moviePoster
-//        titleLabel.text = movie.title
-//        originalTitleLabel.text = movie.orginalTitle
-//        durationLabel.text = movie.formattedDuration
-//        releaseDateLabel.text = movie.releaseDate
-//        descriptionLabel.text = movie.description
+    private func bindData(with movie: RemoteMovieDetail) {
+        titleLabel.text = movie.title
+        originalTitleLabel.text = "\(movie.originalTitle) \(movie.originalTitleRomanised)"
+        let runningTime = convertSecondToHourMinutes(runningTime: movie.runningTime)
+        durationLabel.text = runningTime
+        releaseDateLabel.text = movie.releaseDate
+        descriptionLabel.text = movie.description
+        
+        downloadImage(with: movie.movieBanner, for: bannerImageView)
+        downloadImage(with: movie.image, for: posterImageView)
     }
 
     private func convertSecondToHourMinutes(runningTime: String) -> String {
         guard let runningTime = Int(runningTime) else { return "\(runningTime) m" }
         return "\(runningTime / 60)h \(runningTime % 60)m"
+    }
+    
+    private func downloadImage(with url: URL, for imageView: UIImageView) {
+        let downloadTask = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data else { return }
+            
+            if let downloadedImage = UIImage(data: data) {
+                DispatchQueue.main.sync {
+                    imageView.image = downloadedImage
+                }
+            } else {
+                print("Error fetching image \(error)")
+            }
+        }
+        downloadTask.resume()
+    }
 }
