@@ -10,6 +10,11 @@ import UIKit
 class ListMovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        return refreshControl
+    }()
     
     var movieList: [RemoteMovie] = []
     
@@ -18,35 +23,52 @@ class ListMovieViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view.
         
         setupTableView()
+        startRefreshing()
         getMovieList()
+    }
+    
+    @objc
+    func refresh() {
+        bindData(with: [])
+        getMovieList()
+    }
+    
+    func startRefreshing() {
+        refreshControl.beginRefreshing()
+    }
+    
+    func stopRefreshing() {
+        refreshControl.endRefreshing()
     }
     
     func getMovieList() {
         let url = URL(string: "https://ghibliapi.herokuapp.com/films")!
      
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            do {
-                let decoder = JSONDecoder()
-                let movies = try decoder.decode([RemoteMovie].self, from: data!)
-                
-                self.bindData(with: movies)
-                
-            } catch {
-                print("Error \(error)")
+        URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.stopRefreshing()
+                do {
+                    let decoder = JSONDecoder()
+                    let movies = try decoder.decode([RemoteMovie].self, from: data!)
+                    
+                    self.bindData(with: movies)
+                    
+                } catch let error {
+                }
             }
         }.resume()
     }
     
     func bindData(with movies: [RemoteMovie]) {
-        DispatchQueue.main.async {
-            self.movieList = movies
-            self.tableView.reloadData()
-        }
+        self.movieList = movies.shuffled()
+        self.tableView.reloadData()
     }
     
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.refreshControl = refreshControl
         tableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
     }
     
