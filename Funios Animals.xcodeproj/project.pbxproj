@@ -20,6 +20,7 @@
 		BF46F94528B0DB9A0093E81F /* DetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F94328B0DB9A0093E81F /* DetailMovieViewController.swift */; };
 		BF46F94628B0DB9A0093E81F /* DetailMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF46F94428B0DB9A0093E81F /* DetailMovieViewController.xib */; };
 		BF46F94928B0FFD80093E81F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F94828B0FFD80093E81F /* ProfileViewController.swift */; };
+		BF49874E28CA253F0093F09E /* RemoteMovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF49874D28CA253F0093F09E /* RemoteMovieDetail.swift */; };
 		BFB9654D28C23D5A00CD2B34 /* RemoteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB9654C28C23D5A00CD2B34 /* RemoteMovie.swift */; };
 		BFB9655028C247DB00CD2B34 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BFB9654F28C247DB00CD2B34 /* Kingfisher */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		BF46F94328B0DB9A0093E81F /* DetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = "<group>"; };
 		BF46F94428B0DB9A0093E81F /* DetailMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMovieViewController.xib; sourceTree = "<group>"; };
 		BF46F94828B0FFD80093E81F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BF49874D28CA253F0093F09E /* RemoteMovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMovieDetail.swift; sourceTree = "<group>"; };
 		BFB9654C28C23D5A00CD2B34 /* RemoteMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 			children = (
 				BF46F93C28B0D2300093E81F /* Movie.swift */,
 				BFB9654C28C23D5A00CD2B34 /* RemoteMovie.swift */,
+				BF49874D28CA253F0093F09E /* RemoteMovieDetail.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				BF46F92628B09D310093E81F /* LoginViewController.swift in Sources */,
 				BF46F93828B0CE7D0093E81F /* MovieCell.swift in Sources */,
 				BF46F94528B0DB9A0093E81F /* DetailMovieViewController.swift in Sources */,
+				BF49874E28CA253F0093F09E /* RemoteMovieDetail.swift in Sources */,
 				BF46F94128B0D4840093E81F /* ListMovieViewController.swift in Sources */,
 				BF46F92228B09D310093E81F /* AppDelegate.swift in Sources */,
 				BF46F92428B09D310093E81F /* SceneDelegate.swift in Sources */,
