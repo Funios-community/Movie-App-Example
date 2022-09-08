@@ -63,7 +63,7 @@ class ListMovieViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        routeToDetailMovie(with: movieList[indexPath.row])
+        routeToDetailMovie(for: movieList[indexPath.row].id)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -76,8 +76,9 @@ class ListMovieViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.cancelDownloadRemoveImage()
     }
     
-    func routeToDetailMovie(with movie: Movie) {
+    func routeToDetailMovie(for movieID: String) {
         let detailVC = DetailMovieViewController(nibName: "DetailMovieViewController", bundle: nil)
+        detailVC.movieID = movieID
         self.show(detailVC, sender: nil)
     }
 }
