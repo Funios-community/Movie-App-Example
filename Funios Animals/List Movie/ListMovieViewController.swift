@@ -10,6 +10,8 @@ import UIKit
 class ListMovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var errorLabel: UILabel!
+    
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
@@ -41,6 +43,15 @@ class ListMovieViewController: UIViewController, UITableViewDelegate, UITableVie
         refreshControl.endRefreshing()
     }
     
+    func showErrorLabel(with message: String) {
+        errorLabel.isHidden = false
+        errorLabel.text = message
+    }
+    
+    func hideErrorLabel() {
+        errorLabel.isHidden = true
+    }
+    
     func getMovieList() {
         let url = URL(string: "https://ghibliapi.herokuapp.com/films")!
      
@@ -55,6 +66,7 @@ class ListMovieViewController: UIViewController, UITableViewDelegate, UITableVie
                     self.bindData(with: movies)
                     
                 } catch let error {
+                    self.showErrorLabel(with: error.localizedDescription)
                 }
             }
         }.resume()
