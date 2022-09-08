@@ -21,6 +21,7 @@
 		BF46F94628B0DB9A0093E81F /* DetailMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF46F94428B0DB9A0093E81F /* DetailMovieViewController.xib */; };
 		BF46F94928B0FFD80093E81F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F94828B0FFD80093E81F /* ProfileViewController.swift */; };
 		BF49874E28CA253F0093F09E /* RemoteMovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF49874D28CA253F0093F09E /* RemoteMovieDetail.swift */; };
+		BF49875128CA323D0093F09E /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF49875028CA323D0093F09E /* UIView+Shimmering.swift */; };
 		BFB9654D28C23D5A00CD2B34 /* RemoteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB9654C28C23D5A00CD2B34 /* RemoteMovie.swift */; };
 		BFB9655028C247DB00CD2B34 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BFB9654F28C247DB00CD2B34 /* Kingfisher */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		BF46F94428B0DB9A0093E81F /* DetailMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMovieViewController.xib; sourceTree = "<group>"; };
 		BF46F94828B0FFD80093E81F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BF49874D28CA253F0093F09E /* RemoteMovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMovieDetail.swift; sourceTree = "<group>"; };
+		BF49875028CA323D0093F09E /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		BFB9654C28C23D5A00CD2B34 /* RemoteMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 		BF46F92028B09D310093E81F /* Funios Animals */ = {
 			isa = PBXGroup;
 			children = (
+				BF49874F28CA32320093F09E /* Extenstion */,
 				BF46F94728B0FFCB0093E81F /* Profile */,
 				BF46F94228B0DB6A0093E81F /* Detail Movie */,
 				BF46F93F28B0D4780093E81F /* List Movie */,
@@ -142,6 +145,14 @@
 				BF46F94828B0FFD80093E81F /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		BF49874F28CA32320093F09E /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				BF49875028CA323D0093F09E /* UIView+Shimmering.swift */,
+			);
+			path = Extenstion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +242,7 @@
 				BF46F92228B09D310093E81F /* AppDelegate.swift in Sources */,
 				BF46F92428B09D310093E81F /* SceneDelegate.swift in Sources */,
 				BFB9654D28C23D5A00CD2B34 /* RemoteMovie.swift in Sources */,
+				BF49875128CA323D0093F09E /* UIView+Shimmering.swift in Sources */,
 				BF46F94928B0FFD80093E81F /* ProfileViewController.swift in Sources */,
 				BF46F93D28B0D2300093E81F /* Movie.swift in Sources */,
 			);
