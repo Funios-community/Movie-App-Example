@@ -60,16 +60,21 @@ class ListMovieViewController: UIViewController, UITableViewDelegate, UITableVie
             DispatchQueue.main.async {
                 self.stopRefreshing()
                 do {
-                    let decoder = JSONDecoder()
-                    let movies = try decoder.decode([RemoteMovie].self, from: data!)
-                    
+                    let movies = try self.transformJsonDataToMovieList(with: data!)
                     self.bindData(with: movies)
                     
                 } catch let error {
-                    self.showErrorLabel(with: error.localizedDescription)
+                    let errorMessage = error.localizedDescription
+                    self.showErrorLabel(with: errorMessage)
                 }
             }
         }.resume()
+    }
+    
+    func transformJsonDataToMovieList(with data: Data) throws -> [RemoteMovie] {
+        let decoder = JSONDecoder()
+        let movies = try decoder.decode([RemoteMovie].self, from: data)
+        return movies
     }
     
     func bindData(with movies: [RemoteMovie]) {
@@ -87,6 +92,7 @@ class ListMovieViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         movieList.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
         
