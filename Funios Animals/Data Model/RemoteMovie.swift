@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RemoteMovie: Codable {
+struct RemoteMovie: Decodable {
     let id, title, originalTitle, originalTitleRomanised: String
     let image, movieBanner: URL
     let remoteMovieDescription, director, producer, releaseDate: String
