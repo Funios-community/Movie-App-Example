@@ -84,6 +84,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordTextField" destination="BMv-GJ-Th3" id="F1z-9d-WdK"/>
+                        <outlet property="signInButton" destination="YLw-K5-ZSM" id="ud1-jc-mZ1"/>
+                        <outlet property="usernameTextField" destination="AVg-B7-SpR" id="ztH-65-Ga6"/>
                         <segue destination="5kg-Hg-L47" kind="presentation" identifier="segueToTabbar" modalPresentationStyle="fullScreen" id="IeA-hB-14P"/>
                     </connections>
                 </viewController>
