@@ -40,7 +40,7 @@ class DetailMovieViewController: UIViewController {
                 DispatchQueue.main.async { [weak self] in
                     self?.bindData(with: movieDetail)
                 }
-            } catch {
+            } catch let error {
                 print("Error \(error)")
             }
         }.resume()
@@ -66,7 +66,7 @@ class DetailMovieViewController: UIViewController {
     private func downloadImage(with url: URL, for imageView: UIImageView) {
         let downloadTask = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else { return }
-            
+
             if let downloadedImage = UIImage(data: data) {
                 DispatchQueue.main.sync {
                     imageView.image = downloadedImage
