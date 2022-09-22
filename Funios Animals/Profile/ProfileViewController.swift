@@ -25,8 +25,14 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func onLogoutClick(_ sender: UIButton) {
-        self.tabBarController?.dismiss(animated: true)
         UserDefaults.standard.set(false, forKey: "com.funios.loggedInkey")
+        self.present(makeLoginViewController(), animated: true)
     }
     
+    private func makeLoginViewController() -> LoginViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let videoController = storyboard.instantiateInitialViewController() as! LoginViewController
+        videoController.modalPresentationStyle = .fullScreen
+        return videoController
+    }
 }
