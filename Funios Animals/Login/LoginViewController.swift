@@ -21,21 +21,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        view.isHidden = true
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        isUserAlreadyLoggedIn()
-        view.isHidden = false
-    }
-    
-    private func isUserAlreadyLoggedIn() {
-        if UserDefaults.standard.bool(forKey: loggedInUserDefaultsKey) {
-           perfomSegueToMovieList()
-        }
     }
 
     @IBAction func onLoginClick(_ sender: Any) {
