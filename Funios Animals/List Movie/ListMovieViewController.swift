@@ -18,7 +18,9 @@ class ListMovieViewController: UIViewController, UITableViewDelegate, UITableVie
         return refreshControl
     }()
     
-    var movieList: [RemoteMovie] = []
+    var loader = MovieLoader()
+    
+    var movieList: [Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,22 +55,15 @@ class ListMovieViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func getMovieList() {
-        let url = URL(string: "https://ghibliapi.herokuapp.com/films")!
-     
-        URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
-                self.stopRefreshing()
-                do {
-                    let movies = try self.transformJsonDataToMovieList(with: data!)
-                    self.bindData(with: movies)
-                    
-                } catch let error {
-                    let errorMessage = error.localizedDescription
-                    self.showErrorLabel(with: errorMessage)
-                }
+        loader.getMovieList { result in
+            self.stopRefreshing()
+            switch result {
+            case .success(let movies):
+                self.bindData(with: movies)
+            case .failure(let error):
+                self.showErrorLabel(with: error)
             }
-        }.resume()
+        }
     }
     
     func transformJsonDataToMovieList(with data: Data) throws -> [RemoteMovie] {
@@ -77,7 +72,7 @@ class ListMovieViewController: UIViewController, UITableViewDelegate, UITableVie
         return movies
     }
     
-    func bindData(with movies: [RemoteMovie]) {
+    func bindData(with movies: [Movie]) {
         self.movieList = movies.shuffled()
         self.tableView.reloadData()
     }

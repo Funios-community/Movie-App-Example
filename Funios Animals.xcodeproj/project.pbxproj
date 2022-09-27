@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF3A49C728E3322B00EB9364 /* MovieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A49C628E3322B00EB9364 /* MovieLoader.swift */; };
+		BF3A49C928E33AED00EB9364 /* RemoteMovieDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A49C828E33AED00EB9364 /* RemoteMovieDB.swift */; };
 		BF46F92228B09D310093E81F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F92128B09D310093E81F /* AppDelegate.swift */; };
 		BF46F92428B09D310093E81F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F92328B09D310093E81F /* SceneDelegate.swift */; };
 		BF46F92628B09D310093E81F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46F92528B09D310093E81F /* LoginViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF3A49C628E3322B00EB9364 /* MovieLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLoader.swift; sourceTree = "<group>"; };
+		BF3A49C828E33AED00EB9364 /* RemoteMovieDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMovieDB.swift; sourceTree = "<group>"; };
 		BF46F91E28B09D310093E81F /* Funios Animals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funios Animals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF46F92128B09D310093E81F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF46F92328B09D310093E81F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				BF46F93C28B0D2300093E81F /* Movie.swift */,
 				BFB9654C28C23D5A00CD2B34 /* RemoteMovie.swift */,
 				BF49874D28CA253F0093F09E /* RemoteMovieDetail.swift */,
+				BF3A49C828E33AED00EB9364 /* RemoteMovieDB.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				BF46F94028B0D4840093E81F /* ListMovieViewController.swift */,
+				BF3A49C628E3322B00EB9364 /* MovieLoader.swift */,
 			);
 			path = "List Movie";
 			sourceTree = "<group>";
@@ -241,10 +247,12 @@
 				BF46F94128B0D4840093E81F /* ListMovieViewController.swift in Sources */,
 				BF46F92228B09D310093E81F /* AppDelegate.swift in Sources */,
 				BF46F92428B09D310093E81F /* SceneDelegate.swift in Sources */,
+				BF3A49C928E33AED00EB9364 /* RemoteMovieDB.swift in Sources */,
 				BFB9654D28C23D5A00CD2B34 /* RemoteMovie.swift in Sources */,
 				BF49875128CA323D0093F09E /* UIView+Shimmering.swift in Sources */,
 				BF46F94928B0FFD80093E81F /* ProfileViewController.swift in Sources */,
 				BF46F93D28B0D2300093E81F /* Movie.swift in Sources */,
+				BF3A49C728E3322B00EB9364 /* MovieLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
