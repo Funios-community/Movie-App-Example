@@ -30,7 +30,7 @@ class AuthSingleton {
         userDefaults.set(name, forKey: usernameUserdefaultsKey)
     }
     
-    func getUserLogin() -> Bool? {
+    func getUserLogin() -> Bool {
         return userDefaults.bool(forKey: loggedInUserDefaultsKey)
     }
     

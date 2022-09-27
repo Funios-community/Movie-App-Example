@@ -41,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func isUserAlreadyLoggedIn() -> Bool {
-        return UserDefaults.standard.bool(forKey: "com.funios.loggedInkey")
+        return AuthSingleton.instance.getUserLogin()
     }
 
 

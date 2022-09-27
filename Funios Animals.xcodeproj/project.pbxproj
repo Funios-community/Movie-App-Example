@@ -65,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF1B8C9728E3470000C034F7 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				BF1B8C9528E3443600C034F7 /* AuthSingleton.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
 		BF46F91528B09D310093E81F = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +92,7 @@
 		BF46F92028B09D310093E81F /* Funios Animals */ = {
 			isa = PBXGroup;
 			children = (
+				BF1B8C9728E3470000C034F7 /* Singleton */,
 				BF49874F28CA32320093F09E /* Extenstion */,
 				BF46F94728B0FFCB0093E81F /* Profile */,
 				BF46F94228B0DB6A0093E81F /* Detail Movie */,
@@ -134,7 +143,6 @@
 			children = (
 				BF46F94028B0D4840093E81F /* ListMovieViewController.swift */,
 				BF3A49C628E3322B00EB9364 /* MovieLoader.swift */,
-				BF1B8C9528E3443600C034F7 /* AuthSingleton.swift */,
 			);
 			path = "List Movie";
 			sourceTree = "<group>";
