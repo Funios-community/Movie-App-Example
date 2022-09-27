@@ -15,9 +15,7 @@ class LoginViewController: UIViewController {
     
     private let registeredUsername: String = "azam"
     private let registeredPassword: String = "pass"
-    
-    private let loggedInUserDefaultsKey = "com.funios.loggedInkey"
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -50,12 +48,11 @@ class LoginViewController: UIViewController {
     }
     
     private func saveIsUserLoggeedIn(userLoginSuccesfully isLogin: Bool) {
-        UserDefaults.standard.set(isLogin, forKey: loggedInUserDefaultsKey)
+        AuthSingleton.instance.saveUserLogin(isLogin: isLogin)
     }
     
     private func saveInputtedUsername(inputedUsername username: String) {
-        let usernameUserdefaultsKey = "com.funios.usernameKey"
-        UserDefaults.standard.set(username, forKey: usernameUserdefaultsKey)
+        AuthSingleton.instance.saveUserName(name: username)
     }
 }
 

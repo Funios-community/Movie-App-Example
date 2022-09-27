@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func onLogoutClick(_ sender: UIButton) {
-        UserDefaults.standard.set(false, forKey: "com.funios.loggedInkey")
+        AuthSingleton.instance.logout()
         view.window?.rootViewController?.dismiss(animated: true, completion: { [weak self] in
             guard let self = self else { return }
             self.present(self.makeLoginViewController(), animated: true)
