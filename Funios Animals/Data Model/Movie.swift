@@ -9,13 +9,9 @@ import Foundation
 import UIKit
 
 struct Movie {
-    let id: UUID
+    let id: String
     let title: String
     let orginalTitle: String
     let description: String
-    let movieBanner: UIImage
-    let moviePoster: UIImage
-    let director: String
-    let duration: String
-    let releaseDate: String
+    let movieBanner: URL
 }
