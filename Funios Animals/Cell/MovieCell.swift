@@ -17,23 +17,16 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var imageContainer: UIView!
     
     private var downloadTask: URLSessionDataTask?
-    private var movie: RemoteMovie!
+    private var movie: Movie!
 
     override func prepareForReuse() {
         super.prepareForReuse()
     }
     
     func bindData(with movie: Movie) {
-        imageMovieBanner.image = movie.movieBanner
         labelMovieTitle.text = movie.title
         labelOriginalTitle.text = movie.orginalTitle
         labelSinopsis.text = movie.description
-    }
-    
-    func bindData(with movie: RemoteMovie) {
-        labelMovieTitle.text = movie.title
-        labelOriginalTitle.text = movie.originalTitle
-        labelSinopsis.text = movie.remoteMovieDescription
         
         self.movie = movie
     }
